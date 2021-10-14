@@ -1,0 +1,23 @@
+  <html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        let myData = [["#Datos", "Tiempo de ejecucion"], [0, 2.9330003599170595e-06], [10, 1.4178000128595158e-05], [100, 6.8449990067165345e-06], [1000, 9.777999366633594e-06], [10000, 2.0045001292601228e-05], [100000, 2.4444998416583985e-05], [1000000, 2.8356000257190317e-05]];
+        var data = google.visualization.arrayToDataTable(myData);
+        var options = {
+          title: 'Tiempo de ejecución del algoritmo de "búsqueda binaria" en python',
+          legend: { position: 'bottom' }
+        };
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="curve_chart" style="width:1250px; height: 500px"></div>
+  </body>
+</html>

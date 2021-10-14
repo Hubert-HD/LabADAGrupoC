@@ -1,0 +1,23 @@
+  <html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        let myData = [["#Datos", "Tiempo de ejecucion"], [0, 3.4229997254442424e-06], [10, 1.2223001249367371e-05], [100, 0.0006360529987432528], [1000, 0.061078687002009246], [2500, 0.35455675900084316], [5000, 1.1080791040003533], [7500, 2.588352416998532], [10000, 4.573963406997791]];
+        var data = google.visualization.arrayToDataTable(myData);
+        var options = {
+          title: 'Tiempo de ejecución del algoritmo de "ordenamiento por inserccion" en python',
+          legend: { position: 'bottom' }
+        };
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="curve_chart" style="width:1250px; height: 500px"></div>
+  </body>
+</html>
